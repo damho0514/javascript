@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+    window.onload = function(){ //btn1에 이벤트 등록
+        var btn1 = document.getElementById("btn1");
+        btn1.addEventListener("click", handleclick);
+
+        //btn2에 이벤트 등록
+        var btn2 = document.getElementById("btn2");
+        btn2.addEventListener("click", handleclick);
+        btn2.addEventListener("click", handleclick2);
+
+        //클릭시 창 화면
+        function handleclick() {
+            alert("핸들클릭");
+        }
+
+        function handleclick2(){
+            alert("핸들클릭2");
+        }}
+    
+       
+
+    </script>
+    <button type="button" id="btn1">표준이벤트1</button>
+    <button type="button" id="btn2">표준이벤트2</button>
+</body>
+
+</html>

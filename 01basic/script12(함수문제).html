@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <button type="button" onclick="func1()">클릭1</button>
+    <button type="button" onclick="func2(10)">클릭2</button>
+    <button type="button" onclick="func3('홍길동', 10)">클릭3</button>
+
+    <script>
+        /* function func1() {
+            alert("func1실행");
+        }
+
+        function func2(a) {
+             if(a%2 == 0) {
+                 alert("짝수");
+             } else {
+                 alert("홀수");
+             }
+        }
+
+        function func3(a,b) {
+            alert(a + "님의 점수 : " + b);
+        } */
+
+        var func1 = function() {
+            alert("func1실행");
+        }
+
+        var func2 = function(a) {
+            if(a%2 ==0) {
+                alert("짝수");
+            } else {
+                alert("홀수");
+            }
+        }   
+
+        var func3 = function(a,b) {
+            alert(a + "님의 점수 : " + b)
+        }
+
+
+        //다음 함수와 동일한 결과를 보이는 선언적함수, 익명함수를 각각 선언
+
+        function point(name, b, c, d) {
+            var avg = (b+c+d)/3;
+            return name + "님의 평균 : " + avg;
+        }
+
+
+        /* var point = function(name, b, c, d) {
+            return name + "님의 평균" + (b+c+d)/3;
+            
+        } */
+        
+        console.log(point('홍길동', 88, 90, 91));
+    </script>
+
+
+    
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        /* function func() {
+            var a = "홍길동";
+        } //함수를 벗어나는 순간 a는 해제
+        console.log(a); //error
+         */
+
+        function func() {
+            var a = "홍길동";
+            console.log(a); //홍길동
+            return function() {
+                return a;
+            }
+        }
+        var b = func();
+        console.log(b); //b에 함수자체가 반환된다
+        console.log(b()); //함수 실행시 a의 자원이 해제되지 않는다
+
+        //클로저 - 내부함수(익명함수)가 func1()을 클로즈 할 수 있는 키를 가지고 있다
+        //외부함수 밖에서 내부함수가 호출되더라도, 외부함수의 지역변수에 접근이 가능한데,
+        //이러한 함수들을 클로저라고 합니다
+
+
+    </script>
+
+
+    
+</body>
+</html>

@@ -8,19 +8,30 @@
 <body>
 
     <script>
-        var ok1 = document.getElementById("ok1");
-        ok1.addEventListener("click",handleclick);
 
-        function check1(){
-            alert("네이버로이동");
-            location.href="https://www.naver.com/";
-        }
+        window.onload = function(){
+            var ok1 = document.getElementById("ok1");
+        ok1.addEventListener("mouseover",handleclick1);
+        
+
         var ok2 = document.getElementById("ok2");
-        ok1.addEventListener("click",handleclick);
-        function check2(){
-            alert("구글로이동");
-            location.href="https://www.google.com/"
+        ok2.addEventListener("click",handleclick2);
+
+
+        function handleclick1(){
+            alert("네이버로이동");
+            //location.href="https://www.naver.com/";
+            ok1.style.color ="red";
         }
+        function handleclick2(){
+            alert("구글로이동");
+            // location.href="https://www.google.com/"
+            ok2.style.color ="blue";
+        }
+
+        }
+       
+
         // ok1.onclick = function(){
         //     if(confirm("이동하시겠습니까?")){
         //         location.href="https://www.naver.com/";
@@ -34,8 +45,9 @@
     </script>
 
     <!-- 페이지 이동은 location.href= "경로" -->
-    <button type="button" id="ok1" onclick="check1()">네이버로이동</button>
-    <button type="button" id="ok2" onclick="check2()">구글로이동</button>
+    <button type="button" id="ok1" >네이버로이동</button>
+    <button type="button" id="ok2" >구글로이동</button>
+    
 
   
 </body>

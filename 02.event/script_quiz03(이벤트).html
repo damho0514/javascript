@@ -9,13 +9,29 @@
     
     <h2>자바스크립트 카운트</h2>
     <input type="text" value="0" id="result">
-    <button type="button" >+</button>
-    <button type="button" onclick="check(this)">-</button>
+    <button type="button" id="p" >+</button>
+    <button type="button" class="m" >-</button>
     
     <script>
-        function check(a){
-            alert("0보다 작을 수 없습니다");
-        }
+        
+      var m2 = document.querySelector(".m");
+      var p = document.getElementById("p");
+      var input = document.querySelector("#result");
+      p.onclick = function(){
+          input.value++;
+
+      }
+      m2.addEventListener("click", monus);
+
+      function monus(){
+          if(input.value <= 0){
+            alert("0이하이면 안됩니다");
+          }else{
+            
+            input.value--;
+          }
+      }
+
     </script>
 </body>
 </html>

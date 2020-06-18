@@ -76,13 +76,21 @@
        var body = document.querySelector("body");
         var all = document.querySelectorAll("h2,p,a");
        dark.onclick = function(){
-           body.style.backgroundColor = "black";
+           body.style.backgroundColor = "black"; //배경색
 
-           for(var i = 0; i < all.length; i++){
+           for(var i = 0; i < all.length; i++){ //글자색
                 all[i].style.color = "white";
            }
        }
 
+       //라이트 모드
+       bright.onclick = function(){
+           body.style.backgroundColor = "white";
+
+           for(var i  = 0; i < all.length; i++){
+                all[i].style.color = "black";
+           }
+       }
 
     </script>
 </body>

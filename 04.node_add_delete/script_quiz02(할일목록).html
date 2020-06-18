@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h2>할일 삭제 기능은 아직 구현하지 마세요</h2>
+    <h2>할일 목록 만들기</h2>
+
+    <form class="nameForm">
+        <h3 class="nameTitle"></h3>
+        <input type="text" placeholder="이름을 입력하세요">
+        <button type="button">확인</button>
+    </form>
+
+    <script>
+        var nameForm = document.querySelector(".nameForm");
+        console.log(nameForm);
+        var nameTitle = document.querySelector(".nameTitle");
+        var nameInput = document.querySelector("input");
+        var nameButton = document.querySelector("button");
+
+        nameButton.addEventListener("click", node);
+
+        function node(){
+            nameTitle.innerHTML = nameInput + "님 안녕하세요";
+        }
+        
+
+    </script>
+</body>
+
+</html>

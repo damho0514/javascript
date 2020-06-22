@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        table{border-collapse: collapse; border-spacing: 0px;}
+        thead tr th,
+        tbody tr td{border:1px solid #777;}
+    </style>
+</head>
+<body>
+    <h3>event속성을 이용해서 다음을 구현하세요.</h3>
+
+    <table>
+        <thead>
+            <tr>
+                <th>번호</th>
+                <th>제목</th>
+                <th>내용</th>
+                <th>삭제</th>
+            </tr>
+        </thead>
+            
+        <tbody class="list">
+            <tr>
+                <td>1</td>
+                <td>첫글</td>
+                <td>hi</td>
+                <td><button type="button">삭제</button></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>첫글</td>
+                <td>hi</td>
+                <td><button type="button" >삭제</button></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>첫글</td>
+                <td>hi</td>
+                <td><button type="button" >삭제</button></td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>첫글</td>
+                <td>hi</td>
+                <td><button type="button" >삭제</button></td>
+            </tr>
+        </tbody>
+
+        
+    </table>
+
+    <script>
+        var list = document.querySelectorAll(".list button");
+
+            for (var i = 0; i < list.length; i++) {
+                list[i].addEventListener("click", handleDelete);
+
+            }
+            function handleDelete() {
+                event.target.parentElement.parentElement.remove();
+            }
+        
+
+    </script>
+</body>
+</html>

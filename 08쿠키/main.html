@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- 팝업js -->
+    <script src="popup.js"></script>
+
+</head>
+<body>
+    
+    <h2>메인화면</h2>
+    <script>
+    window.onload = function () {
+        
+        //mainPopup쿠키가 없는 겨우에 팝업창을 실행
+        if(!getCookie("mainPopup") ) {
+            window.open("popup.html", "메인팝업창", "width=300", "height=300", "top=200", "left=200");
+        }
+        
+    };
+
+        // //쿠키 확인 검사
+        // function getCookie(name){
+        //    var cookies =  document.cookie.split("; ");
+        //     for(var i in cookies){
+        //         if(cookies[i].search(name) != -1){ //쿠키를 찾으면
+        //             return true; //찾은 의미로 true반환
+        //         }
+        //     }
+        // //    console.log(cookies);
+        // }
+        
+    </script>
+</body>
+</html>
